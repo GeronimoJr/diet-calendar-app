@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Helvetica Neue LT Std - Bd";
+  src: url("../fonts/HelveticaNeueLTStd-Bd.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Roman";
+  src: url("../fonts/HelveticaNeueLTStd-Roman.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Lt";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Md";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Arial MT";
+  src: url("../fonts/Arial-MT.ttf"); }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 978px;
+  margin: 0 20px; }
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #828282;
+  margin: 55px 0;
+  height: 190px; }
+  .footer .footer__container .footer__info {
+    padding: 0 48px;
+    border-left: 1px solid rgba(0, 0, 0, 0.44); }
+    .footer .footer__container .footer__info:first-child {
+      padding-left: 0;
+      border: none; }
+    .footer .footer__container .footer__info .footer__header {
+      font-family: "Helvetica Neue LT Std - Md", sans-serif;
+      font-size: 28px;
+      margin-top: 10px; }
+      .footer .footer__container .footer__info .footer__header span {
+        font-family: "Arial MT", sans-serif;
+        font-size: 16px; }
+    .footer .footer__container .footer__info .footer__text {
+      font-family: "Arial MT", sans-serif;
+      font-size: 15px;
+      margin-bottom: 20px; }
+    .footer .footer__container .footer__info .footer__button {
+      font-family: "Helvetica Neue LT Std - Roman", sans-serif;
+      height: 33px;
+      background-color: white;
+      border: 1px solid #b8b8b8;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #a4a4a4;
+      margin-right: 14px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; }
+      .footer .footer__container .footer__info .footer__button .fab {
+        font-size: 20px;
+        padding-right: 10px; }
+
+@media (max-width: 991.98px) {
+  .footer {
+    margin: 0; }
+    .footer .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .footer .footer__container .footer__info {
+        padding: 50px 0;
+        border-left: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.44); }
+        .footer .footer__container .footer__info:first-child {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.44); }
+        .footer .footer__container .footer__info:last-child {
+          border: none; } }

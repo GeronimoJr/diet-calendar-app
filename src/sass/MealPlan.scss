@@ -1,0 +1,81 @@
+@import "variables";
+
+.mealPlan {
+    display: flex;
+    justify-content: center;
+    color: $calendar-default-font-color;
+    .mealPlan__container {
+        align-items: center;
+        flex-direction: column;
+        .calendar {
+            min-height: 580px;
+            position: relative;
+            display: flex;
+            width: 100%;
+            background: 
+            radial-gradient(circle at 50% 120%, transparent 30%, #e9e9e9 10%, #e9e9e9 40%, transparent 45%, transparent),
+            radial-gradient(circle at 50% -20%, transparent 30%, #e9e9e9 10%, #e9e9e9 40%, transparent 45%, transparent) 5px 0;
+            background-color: #f0f0f0;
+            background-size: 10px 4px;
+            border-radius: 5px;
+            .calendar__leftPanel {
+                width: 85px;
+                min-width: 80px;
+                display: flex;
+                flex-direction: column;
+                font-family: $helvetica-bd;
+                .calendar__hour {
+                    height: 92px;
+                    padding: 10px 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: 2px solid rgba(0, 0, 0, .1);
+                    p {
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        span {
+                            font-family: $helvetica-lt;
+                        }
+                    }
+                }
+                .calendar__hour--marginTop {
+                    margin-top: 50px;
+                    border-top: none;
+                }
+                .calendar__hour--marginBottom {
+                    margin-bottom: 35px;
+                }
+                .calendar__activity {
+                    border-top: 2px solid rgba(0, 0, 0, .1);
+                    align-items: center;
+                    height: 35px;
+                    p {
+                        font-family: $helvetica-roman;
+                        font-size: 11px;
+                        text-align: center;
+                    }
+                }
+            }
+            .calendar__content {
+                width: 100%;
+                display: flex;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+.mealPlan {
+    .calendar {
+         margin-top: 25px;
+            .calendar__leftPanel {
+                display: none;
+            }
+            .calendar__content {
+                flex-direction: column;
+                margin-top: 600px;
+            }
+        }
+    }    
+}

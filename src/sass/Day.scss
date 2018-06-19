@@ -1,0 +1,187 @@
+@import "variables";
+
+.day {
+    &:first-child {
+        .day__footer {
+            border-left: none;
+        }
+    }
+    &:last-child {
+        .day__header {
+            margin-right: 0;
+            border-top-right-radius: 5px;
+        }
+    }
+    max-width: 128.5px;
+    display: flex;
+    flex-direction: column;
+    .day__header {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        font-family: $helvetica-md;
+        color: $first-color;
+        margin: 0 1px;
+        p {
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+    .day__meal {
+        height: 90px;
+        background-color: white;
+        padding: 13px 13px;
+        position: relative;
+        margin: 2px 1px 0 1px;
+        .day__mealName {
+            font-family: $arial-mt;
+            font-size: 13px;
+            margin: 0;
+            z-index: 1;
+        }
+        /* A class to display picture of the meal. */
+        .day__mealPicture {
+            &-true {
+                position: absolute;
+                width: 100%;
+                max-width: 111px;
+                bottom: 0;
+                left: calc( calc( 100% - 111px) / 2);
+                filter: grayscale(60%);
+                opacity: .6;
+            }
+            &-false {
+                display: none;
+            }
+        }
+    }
+    .day__meal--off {
+        background-color: transparent;
+    }
+    .day__footer {
+        border-right: 1px solid rgba(0, 0, 0, .1);
+        border-left: 1px solid rgba(0, 0, 0, .1);
+        .day__carb {
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .day__carbName {
+                margin: 0;
+                text-transform: uppercase;
+                font-family: $helvetica-roman;
+                font-size: 11px;
+            }
+        }
+        .day__gym {
+            border-top: 2px solid rgba(0, 0, 0, .1);
+            height: 35px;
+            p {
+                font-size: 11px;
+                text-align: center;
+            }
+        }
+    }
+    .day__freeDayInfo {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 122px);
+        margin: 2px 0 0 1px;
+        .day__freeDayInfo--transform {
+            .day__freeDayText {
+                font-family: $helvetica-lt;
+                text-transform: uppercase;
+                text-align: center;
+                width: 270px;
+                color: $free-day-font-color;
+                font-size: 31px;
+                transform: rotate(-90deg);
+            }
+        }
+    }
+}
+/* A class to styles current day. */
+.day--current {
+    &-true {
+        margin: 0;
+        border: 2px solid $second-color;
+        .day__header {
+            height: 48px;
+            padding-bottom: 2px;
+            color: $second-color;
+        }
+        .day__meal {
+            color: black;
+            margin-right: 0;
+            .day__mealPicture {
+                &-true {
+                    filter: none;
+                    opacity: 1;
+                }
+            }
+        }
+        .day__footer {
+            border-right: none;
+            .day__gym {
+                height: 33px;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .day {
+        border: none;
+        position: absolute;
+        top: 0;
+        width: calc(100% - 80px);
+        max-width: 100%;
+        .day__header {
+            padding: 13px 13px;
+            border-bottom: 2px solid rgba(0, 0, 0, .1);
+            justify-content: start;
+        }
+        .day__footer {
+            height: 88px;
+        }
+        .day__freeDayInfo {
+            height: 460px;
+        }
+    }
+    /* A class to display day - mobile. */
+    .dayActive {
+        &-true {
+            display: flex;
+        }
+        &-false {
+            display: none;
+        }
+    }
+    /* A class to styles current day - mobile. */
+    .day--current {
+        &-true {
+            border: 2px solid $second-color;
+            .day__header {
+                padding: 0px 11px 2px;
+            }
+            .day__meal {
+                color: black;
+                padding: 13px 11px;
+                .day__mealPicture {
+                    &-true {
+                        left: calc( calc( 100% - 113px) / 2);
+                    }
+                }
+            }
+            .day__footer {
+                border-right: none;
+            }
+        }
+    }
+}

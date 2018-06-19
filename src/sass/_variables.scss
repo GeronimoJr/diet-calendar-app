@@ -1,0 +1,52 @@
+//FONTS//
+
+@font-face {
+    font-family: "Helvetica Neue LT Std - Bd";
+    src: url('../fonts/HelveticaNeueLTStd-Bd.otf');
+}
+@font-face {
+    font-family: "Helvetica Neue LT Std - Roman";
+    src: url('../fonts/HelveticaNeueLTStd-Roman.otf');
+}
+@font-face {
+    font-family: "Helvetica Neue LT Std - Lt";
+    src: url('../fonts/HelveticaNeueLTStd-Lt.otf');
+}
+@font-face {
+    font-family: "Helvetica Neue LT Std - Md";
+    src: url('../fonts/HelveticaNeueLTStd-Lt.otf');
+}
+@font-face {
+    font-family: "Arial MT";
+    src: url('../fonts/Arial-MT.ttf');
+}
+
+$helvetica-bd: "Helvetica Neue LT Std - Bd", sans-serif;
+$helvetica-roman: "Helvetica Neue LT Std - Roman", sans-serif;
+$helvetica-lt: "Helvetica Neue LT Std - Lt", sans-serif;
+$helvetica-md: "Helvetica Neue LT Std - Md", sans-serif;
+$arial-mt: "Arial MT", sans-serif;
+
+//COLORS//
+
+$header-default-color: #7c7c7c;
+$first-color: #adbb0c;
+$second-color: #ff801a;
+$header-border-color: #efefef;
+$progress-default-color: #dbdbdb;
+$calendar-default-font-color: #828282;
+$progress-font-title: #bdbdbd;
+$progress-control-done-color: #b2c200;
+$week-slider-button-border: #c0c0c0;
+$week-slider-button-arrow: #7d7d7d;
+$free-day-font-color: #c2c2c2;
+$footer-button-border-color: #b8b8b8;
+$footer-button-text-color: #a4a4a4;
+
+//UNIVERSAL//
+
+.container {
+    display: flex;
+    width: 978px;
+    margin: 0 20px;
+}

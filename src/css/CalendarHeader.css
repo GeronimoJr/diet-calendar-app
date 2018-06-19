@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Helvetica Neue LT Std - Bd";
+  src: url("../fonts/HelveticaNeueLTStd-Bd.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Roman";
+  src: url("../fonts/HelveticaNeueLTStd-Roman.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Lt";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Md";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Arial MT";
+  src: url("../fonts/Arial-MT.ttf"); }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 978px;
+  margin: 0 20px; }
+
+.calendarHeader {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 112px;
+  font-family: "Helvetica Neue LT Std - Roman", sans-serif; }
+  .calendarHeader .calendarHeader__progressPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .calendarHeader .calendarHeader__progressPanel .calendarHeader__progressTitle {
+      font-size: 9px;
+      color: #bdbdbd;
+      padding: 0;
+      margin-bottom: 25px;
+      text-transform: uppercase; }
+    .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      list-style-type: none;
+      margin: 0 0 10px 0;
+      padding: 0; }
+      .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList li {
+        width: 20px;
+        position: relative;
+        font-size: 9px;
+        left: -5px;
+        text-align: center;
+        color: #828282; }
+        .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList li::before {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 2px;
+          background-color: #dbdbdb;
+          position: absolute;
+          left: -5px;
+          top: -11px; }
+        .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList li::after {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          position: absolute;
+          left: 5px;
+          top: -15px;
+          background-color: #dbdbdb;
+          border: 2px solid #dbdbdb;
+          border-radius: 100%; }
+        .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList li:first-child::before {
+          display: none; }
+      .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList .calendarHeader__weekList-done::after {
+        background-color: #b2c200;
+        border-color: #b2c200; }
+      .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList .calendarHeader__weekList-done::before {
+        background-color: #b2c200; }
+      .calendarHeader .calendarHeader__progressPanel .calendarHeader__weekList .calendarHeader__weekList-active::after {
+        background-color: transparent; }
+  .calendarHeader .calendarHeader__Slider {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .calendarHeader .calendarHeader__Slider .calendarHeader__Title {
+      font-size: 48px;
+      color: #ff801a;
+      margin: 0 45px; }
+    .calendarHeader .calendarHeader__Slider .calendarHeader__button {
+      width: 24px;
+      height: 42px;
+      border: 1px solid #c0c0c0;
+      border-radius: 5px;
+      background-color: white;
+      position: relative;
+      cursor: pointer; }
+      .calendarHeader .calendarHeader__Slider .calendarHeader__button::after {
+        content: "";
+        display: block;
+        height: 10px;
+        width: 10px;
+        position: absolute;
+        top: 15px;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
+    .calendarHeader .calendarHeader__Slider .calendarHeader__button--prev::after {
+      border-left: 1px solid #7d7d7d;
+      border-bottom: 1px solid #7d7d7d;
+      left: 8px; }
+    .calendarHeader .calendarHeader__Slider .calendarHeader__button--next::after {
+      border-right: 1px solid #7d7d7d;
+      border-top: 1px solid #7d7d7d;
+      right: 8px; }
+  .calendarHeader .calendarHeader__proteinOptions {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .calendarHeader .calendarHeader__proteinOptions p {
+      font-size: 9px;
+      color: #bdbdbd;
+      text-transform: uppercase; }
+  .calendarHeader .calendar__Slider--display {
+    display: none; }
+
+@media (max-width: 991.98px) {
+  .calendarHeader {
+    height: 350px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .calendarHeader .calendarHeader__progressPanel {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+    .calendarHeader .calendarHeader__Slider {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    .calendarHeader .calendar__Slider--display {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }

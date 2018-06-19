@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "Helvetica Neue LT Std - Bd";
+  src: url("../fonts/HelveticaNeueLTStd-Bd.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Roman";
+  src: url("../fonts/HelveticaNeueLTStd-Roman.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Lt";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Md";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Arial MT";
+  src: url("../fonts/Arial-MT.ttf"); }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 978px;
+  margin: 0 20px; }
+
+.day {
+  max-width: 128.5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  .day:first-child .day__footer {
+    border-left: none; }
+  .day:last-child .day__header {
+    margin-right: 0;
+    border-top-right-radius: 5px; }
+  .day .day__header {
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    font-family: "Helvetica Neue LT Std - Md", sans-serif;
+    color: #adbb0c;
+    margin: 0 1px; }
+    .day .day__header p {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold; }
+  .day .day__meal {
+    height: 90px;
+    background-color: white;
+    padding: 13px 13px;
+    position: relative;
+    margin: 2px 1px 0 1px;
+    /* A class to display picture of the meal. */ }
+    .day .day__meal .day__mealName {
+      font-family: "Arial MT", sans-serif;
+      font-size: 13px;
+      margin: 0;
+      z-index: 1; }
+    .day .day__meal .day__mealPicture-true {
+      position: absolute;
+      width: 100%;
+      max-width: 111px;
+      bottom: 0;
+      left: calc( calc( 100% - 111px) / 2);
+      -webkit-filter: grayscale(60%);
+              filter: grayscale(60%);
+      opacity: .6; }
+    .day .day__meal .day__mealPicture-false {
+      display: none; }
+  .day .day__meal--off {
+    background-color: transparent; }
+  .day .day__footer {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 1px solid rgba(0, 0, 0, 0.1); }
+    .day .day__footer .day__carb {
+      height: 35px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .day .day__footer .day__carb .day__carbName {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: "Helvetica Neue LT Std - Roman", sans-serif;
+        font-size: 11px; }
+    .day .day__footer .day__gym {
+      border-top: 2px solid rgba(0, 0, 0, 0.1);
+      height: 35px; }
+      .day .day__footer .day__gym p {
+        font-size: 11px;
+        text-align: center; }
+  .day .day__freeDayInfo {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: calc(100% - 122px);
+    margin: 2px 0 0 1px; }
+    .day .day__freeDayInfo .day__freeDayInfo--transform .day__freeDayText {
+      font-family: "Helvetica Neue LT Std - Lt", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      width: 270px;
+      color: #c2c2c2;
+      font-size: 31px;
+      -webkit-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+
+/* A class to styles current day. */
+.day--current-true {
+  margin: 0;
+  border: 2px solid #ff801a; }
+  .day--current-true .day__header {
+    height: 48px;
+    padding-bottom: 2px;
+    color: #ff801a; }
+  .day--current-true .day__meal {
+    color: black;
+    margin-right: 0; }
+    .day--current-true .day__meal .day__mealPicture-true {
+      -webkit-filter: none;
+              filter: none;
+      opacity: 1; }
+  .day--current-true .day__footer {
+    border-right: none; }
+    .day--current-true .day__footer .day__gym {
+      height: 33px; }
+
+@media (max-width: 991.98px) {
+  .day {
+    border: none;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 80px);
+    max-width: 100%; }
+    .day .day__header {
+      padding: 13px 13px;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: start; }
+    .day .day__footer {
+      height: 88px; }
+    .day .day__freeDayInfo {
+      height: 460px; }
+  /* A class to display day - mobile. */
+  .dayActive-true {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .dayActive-false {
+    display: none; }
+  /* A class to styles current day - mobile. */
+  .day--current-true {
+    border: 2px solid #ff801a; }
+    .day--current-true .day__header {
+      padding: 0px 11px 2px; }
+    .day--current-true .day__meal {
+      color: black;
+      padding: 13px 11px; }
+      .day--current-true .day__meal .day__mealPicture-true {
+        left: calc( calc( 100% - 113px) / 2); }
+    .day--current-true .day__footer {
+      border-right: none; } }

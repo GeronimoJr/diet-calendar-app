@@ -1,0 +1,68 @@
+@import "variables";
+
+.footer {
+    display: flex;
+    justify-content: center;
+    color: $calendar-default-font-color;
+    margin: 55px 0;
+    height: 190px;
+    .footer__container {
+        .footer__info {
+            padding: 0 48px;
+            border-left: 1px solid rgba(0, 0, 0, .44);
+            &:first-child {
+                padding-left: 0;
+                border: none;
+            }
+            .footer__header {
+                font-family: $helvetica-md;
+                font-size: 28px;
+                margin-top: 10px;
+                span {
+                    font-family: $arial-mt;
+                    font-size: 16px;
+                }
+            }
+            .footer__text {
+                font-family: $arial-mt;
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+            .footer__button {
+                font-family: $helvetica-roman;
+                height: 33px;
+                background-color: white;
+                border: 1px solid $footer-button-border-color;
+                border-radius: 5px;
+                cursor: pointer;
+                color: $footer-button-text-color;
+                margin-right: 14px;
+                display: inline-flex;
+                .fab {
+                    font-size: 20px;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .footer {
+        margin: 0;
+        .footer__container {
+            flex-direction: column;
+            .footer__info {
+                padding: 50px 0;
+                border-left: none;
+                border-bottom: 1px solid rgba(0, 0, 0, .44);
+                &:first-child {
+                border-bottom: 1px solid rgba(0, 0, 0, .44);
+                }
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+    }
+}

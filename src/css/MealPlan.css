@@ -1,0 +1,115 @@
+@font-face {
+  font-family: "Helvetica Neue LT Std - Bd";
+  src: url("../fonts/HelveticaNeueLTStd-Bd.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Roman";
+  src: url("../fonts/HelveticaNeueLTStd-Roman.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Lt";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Md";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Arial MT";
+  src: url("../fonts/Arial-MT.ttf"); }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 978px;
+  margin: 0 20px; }
+
+.mealPlan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #828282; }
+  .mealPlan .mealPlan__container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .mealPlan .mealPlan__container .calendar {
+      min-height: 580px;
+      position: relative;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+      background: radial-gradient(circle at 50% 120%, transparent 30%, #e9e9e9 10%, #e9e9e9 40%, transparent 45%, transparent), radial-gradient(circle at 50% -20%, transparent 30%, #e9e9e9 10%, #e9e9e9 40%, transparent 45%, transparent) 5px 0;
+      background-color: #f0f0f0;
+      background-size: 10px 4px;
+      border-radius: 5px; }
+      .mealPlan .mealPlan__container .calendar .calendar__leftPanel {
+        width: 85px;
+        min-width: 80px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        font-family: "Helvetica Neue LT Std - Bd", sans-serif; }
+        .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__hour {
+          height: 92px;
+          padding: 10px 10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          border-top: 2px solid rgba(0, 0, 0, 0.1); }
+          .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__hour p {
+            font-size: 13px;
+            text-transform: uppercase; }
+            .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__hour p span {
+              font-family: "Helvetica Neue LT Std - Lt", sans-serif; }
+        .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__hour--marginTop {
+          margin-top: 50px;
+          border-top: none; }
+        .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__hour--marginBottom {
+          margin-bottom: 35px; }
+        .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__activity {
+          border-top: 2px solid rgba(0, 0, 0, 0.1);
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          height: 35px; }
+          .mealPlan .mealPlan__container .calendar .calendar__leftPanel .calendar__activity p {
+            font-family: "Helvetica Neue LT Std - Roman", sans-serif;
+            font-size: 11px;
+            text-align: center; }
+      .mealPlan .mealPlan__container .calendar .calendar__content {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+
+@media (max-width: 991.98px) {
+  .mealPlan .calendar {
+    margin-top: 25px; }
+    .mealPlan .calendar .calendar__leftPanel {
+      display: none; }
+    .mealPlan .calendar .calendar__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 600px; } }

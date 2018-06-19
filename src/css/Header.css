@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Helvetica Neue LT Std - Bd";
+  src: url("../fonts/HelveticaNeueLTStd-Bd.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Roman";
+  src: url("../fonts/HelveticaNeueLTStd-Roman.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Lt";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Helvetica Neue LT Std - Md";
+  src: url("../fonts/HelveticaNeueLTStd-Lt.otf"); }
+
+@font-face {
+  font-family: "Arial MT";
+  src: url("../fonts/Arial-MT.ttf"); }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 978px;
+  margin: 0 20px; }
+
+.header {
+  min-height: 79px;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.13);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.13);
+  color: #7c7c7c; }
+  .header .header__container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .header .header__container .header__nav {
+      height: 100%;
+      padding-left: 117px; }
+      .header .header__container .header__nav .header__navList {
+        height: 100%;
+        list-style-type: none;
+        border-left: 1px solid #efefef;
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        .header .header__container .header__nav .header__navList li {
+          padding-left: 30px;
+          text-transform: uppercase;
+          font-family: "Helvetica Neue LT Std - Bd", sans-serif;
+          font-size: 14px;
+          cursor: pointer;
+          position: relative;
+          -webkit-transition: .2s;
+          transition: .2s; }
+          .header .header__container .header__nav .header__navList li:hover {
+            color: #ff801a;
+            /* Line under text */ }
+            .header .header__container .header__nav .header__navList li:hover::after {
+              content: "";
+              display: block;
+              width: 25px;
+              height: 2px;
+              margin-top: 5px;
+              background-color: #ff801a;
+              opacity: 0.44;
+              position: absolute;
+              left: 50%; }
+    .header .header__container .header__userPanel {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      cursor: pointer; }
+      .header .header__container .header__userPanel .header__userImg {
+        width: 32px;
+        height: 32px;
+        margin-right: 11px;
+        border-radius: 100%;
+        -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.32);
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.32);
+        margin-left: 31px; }
+      .header .header__container .header__userPanel .header__userName {
+        font-family: "Helvetica Neue LT Std - Roman", sans-serif;
+        font-size: 15px; }
+        .header .header__container .header__userPanel .header__userName::after {
+          /* Chevron-up */
+          content: "";
+          display: inline-block;
+          margin: 0 0 4px 10px;
+          width: 6px;
+          height: 6px;
+          border-bottom: 1px solid #adadad;
+          border-right: 1px solid #adadad;
+          -webkit-transform: rotate(45deg);
+                  transform: rotate(45deg); }
+
+@media (max-width: 767.98px) {
+  .header .header__container .header__nav {
+    padding: 0px; }
+    .header .header__container .header__nav .header__navList {
+      border: none; }
+      .header .header__container .header__nav .header__navList li {
+        padding: 0 20px 0 0;
+        font-size: 11px; }
+        .header .header__container .header__nav .header__navList li:hover::after {
+          display: none; }
+  .header .header__container .header__userPanel .header__userName {
+    display: none; } }
